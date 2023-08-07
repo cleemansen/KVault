@@ -35,7 +35,7 @@ class DebugViewController: UIViewController {
     }
     
     @objc func debug() {
-        let vault = KVault(serviceName: "DEBUG", accessGroup: nil, accessibility: KVault.Accessible.afterfirstunlock)
+        let vault = KVaultKeychain(serviceName: "DEBUG", accessGroup: nil, accessibility: KVaultKeychain.Accessible.afterfirstunlock) as KVault
         self.performOperations(on: vault)
     }
     
